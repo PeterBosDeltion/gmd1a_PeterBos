@@ -24,6 +24,8 @@ public class Buttonclick : MonoBehaviour {
         Ballscript.HP = 5; //Reset de levens
         Score.points = 0; //Reset de score
         Castle.HP = 6; //Reset het kasteel
+        Castle.onfire = false; //Reset het kasteel
+        Castle.winner = false; //Reset het kasteel
 
         
        
