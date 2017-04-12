@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour {
     public Rigidbody rb;
     public float stuckTimer;
     public static bool isHard;
+    public float detCooldown;
 
 
 
@@ -134,17 +135,11 @@ public class Enemy : MonoBehaviour {
         if (inRange == false)
         {
             flash.SetActive(false);
-            
-            
-                if(flash.activeSelf == false)
-                {
-                    if (Player.detection > 0)
-                    {
-                        Player.detection -= 0.5F;
-
-                    }
-               
-                
+            detCooldown += Time.deltaTime;
+            if(detCooldown >= 15)
+            {
+                Player.detection = 0;
+                detCooldown = 0;
             }
             
         }
@@ -172,6 +167,7 @@ public class Enemy : MonoBehaviour {
     {
         if (obstructed == true)
         {
+            
             stuckTimer += Time.deltaTime;
             if (stuckTimer >= 20)
             {
@@ -187,9 +183,9 @@ public class Enemy : MonoBehaviour {
     public void makeHarder() //( ͡° ͜ʖ ͡°)
     {
         if(isHard == true)
-        { 
-        speed = 6;
-        detectRate = 1;
+        {
+            speed = 6;
+            detectRate = 1;
         }
     }
 }

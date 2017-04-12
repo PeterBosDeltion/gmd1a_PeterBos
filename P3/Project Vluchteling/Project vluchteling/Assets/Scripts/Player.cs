@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
     {
         if (detection <= 100)
         {
-            detText.text = "" + detection + "%";
+            detText.text = "Detection: " + detection + "%";
         }
     }
 
