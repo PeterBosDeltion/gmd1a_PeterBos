@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Conversmanager.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Gamemanager.cs" />
+    <Compile Include="Assets\Scripts\Lol.cs" />
     <Compile Include="Assets\Scripts\Npc.cs" />
     <Compile Include="Assets\Scripts\Pickup.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

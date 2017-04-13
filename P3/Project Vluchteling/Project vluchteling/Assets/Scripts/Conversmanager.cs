@@ -41,6 +41,10 @@ public class Conversmanager : MonoBehaviour {
         {
             negtCont();
         }
+        else if(input.text == "Dyslexia" || input.text == "dyslexia")
+        {
+            GetComponent<Gamemanager>().easterEggscene();
+        }
         else
         {
             calcInsult();

@@ -57,4 +57,8 @@ public class Gamemanager : MonoBehaviour {
 
     }
 
+    public void easterEggscene()
+    {
+        SceneManager.LoadScene("sim");
+    }
 }
