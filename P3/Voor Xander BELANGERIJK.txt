@@ -1,0 +1,6 @@
+voor als als u dit nakijkt voordat ik hierover u hebt gevraagd.
+
+als ik de lighting in mijn scene bake dan word de lightmap te groot om via
+github te committen.
+
+dus in de huidige versie zit geen gebakde lighting.
