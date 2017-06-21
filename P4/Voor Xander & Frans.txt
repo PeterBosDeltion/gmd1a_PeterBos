@@ -1,0 +1,5 @@
+voor Xander:
+Ons unity project is te vinden op de repo van dominik.
+
+voor Frans:
+Bij mijn inventory zit ook mijn charactercontroller die ik voor periode 2 moest herkansen.
