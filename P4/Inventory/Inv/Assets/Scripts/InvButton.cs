@@ -44,8 +44,12 @@ public class InvButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (currentItem == null)
+        {
+            hasItem = false;
+            GetComponent<Image>().sprite = inv.defaultSlotSprite;
+        }
+    }
 
 
 
@@ -154,6 +158,7 @@ public class InvButton : MonoBehaviour {
         if(currentItem == null)
         {
             hasItem = false;
+            GetComponent<Image>().sprite = inv.defaultSlotSprite;
         }
         else if(currentItem != null)
         {
@@ -169,7 +174,6 @@ public class InvButton : MonoBehaviour {
 
     public void Swap()
     {
-        //all info of object on end drag needs to go to dragStartObject
         currentItem = draggedOver.GetComponent<InvButton>().currentItem;
         GetComponent<Image>().sprite = draggedOver.GetComponent<InvButton>().GetComponent<Image>().sprite;
         //draggedOver.GetComponent<InvButton>().hasItem = true;

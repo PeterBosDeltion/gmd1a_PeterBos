@@ -7,10 +7,15 @@ public class CharcControl : MonoBehaviour {
     public float mousesensitivity = 5.0F;
     public float updownrange = 60.0F;
     float verticalRotation = 0;
-    public static Animator anim;
+   // public static Animator anim;
     // Use this for initialization
     void Start () {
-        anim = GetComponent<Animator>();
+        //Character controller is hier als herkansing voor Periode 2
+        //Volgens u zou je hiervoor een voldoende krijgen voor P2
+        //Ik weet wel dat het geen physics volgt en dat je daarvoor een rigidbody moet gebruiken
+
+        //Animation was voor een ander project
+        //anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -27,11 +32,11 @@ public class CharcControl : MonoBehaviour {
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-        anim.SetBool("moving",  true);
+        //anim.SetBool("moving",  true);
         }
         else
         {
-            anim.SetBool("moving", false);
+            //anim.SetBool("moving", false);
         }
         transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
@@ -48,9 +53,9 @@ public class CharcControl : MonoBehaviour {
 
     IEnumerator FearAnim()
     {
-        anim.SetBool("beingSeen", true);
+        //anim.SetBool("beingSeen", true);
         yield return new WaitForSeconds(0.9F);
-        anim.SetBool("beingSeen", false);
+        //anim.SetBool("beingSeen", false);
     }
 
     void MouseLook()

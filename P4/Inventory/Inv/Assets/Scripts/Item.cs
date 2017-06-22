@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : Stats {
-
+    public bool stackable;
+    public int stackedObjects;
 	// Use this for initialization
 	void Start () {
 		
